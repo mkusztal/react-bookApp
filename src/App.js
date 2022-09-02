@@ -27,7 +27,6 @@ const App = () => {
       ...books,
       { id: shortid(), title: newBook.title, author: newBook.author },
     ]);
-    debugger;
   };
 
   return (

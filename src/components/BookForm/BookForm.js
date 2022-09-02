@@ -1,14 +1,15 @@
 import { useState } from 'react';
 
-const BookForm = (addBook) => { 
+const BookForm = (props) => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
+  const { addBook } = props;
   const handleSubmit = (e) => {
     e.preventDefault();
-    addBook({ title: title, author: author });
     setTitle('');
     setAuthor('');
+    addBook({ title: title, author: author });
   };
 
   return (
